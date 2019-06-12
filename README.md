@@ -1,0 +1,2 @@
+# SafHackatonAPI
+Scratch card API
