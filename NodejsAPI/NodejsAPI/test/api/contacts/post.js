@@ -18,12 +18,12 @@ var settings = require("../../../settings");
          //request(app).post('/')
          server.post("/scratchCards")
          .send({             
-                SerialNumber: "11",
-                ExpiryDate: "2019-01-01T00:00:00.000Z",
+                SerialNumber: "1234567890",
+                ExpiryDate: "2019-06-12T00:00:00.000Z",
                 VoucherAmount: 100000,
                 Status: "active",
-                DateCreated: "2019-01-01T00:00:00.000Z",
-                DateUpdated: "2019-01-01T00:00:00.000Z"               
+                DateCreated: "2019-06-12T00:00:00.000Z",
+                DateUpdated: "2019-06-12T00:00:00.000Z"               
         })
         .then((res)=>{
             const body=res.body;            

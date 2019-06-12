@@ -61,7 +61,7 @@ exports.sent200=function (req,resp){
 exports.showHome=function (req,resp){
     if(settings.httpMsgsFormat==="HTML"){
         resp.writeHead(202, { "Content-Type": "text/html" });
-        resp.write("<html><head><title>home</title></head><body>valid endpoints </br> /contacts - GET -to list all contacts</body></html>")
+        resp.write("<html><head><title>home</title></head><body>valid endpoints </br> <ul><li> /scratchCards - POST -Create a scratch card record.</li><li> /newScratchCards - GET -Fetch all records inserted in the last 3 minutes.</li><li> /scratchCards/{serialNumber} - GET -Fetch a scratch card record by the serial number</li><li> /updateExpiredScratchCard - PUT -update expired Scratch Card to inactive</li><li> /updateScratchCardStatus - DELETE -Delete all inactive records</li><li> /scratchCards - DELETE -Update scratch card info set status to taken</li></ul> </body></html>")
     }
     else{ 
         resp.writeHead(202, "Resource not found", { "Content-Type": "application/json" });

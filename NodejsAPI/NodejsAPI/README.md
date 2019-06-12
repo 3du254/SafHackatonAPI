@@ -4,6 +4,19 @@
    This algorithm should generate only numbers. The algorithm should not be reversible. 
    Assume you pass a combination of numbers  or words to achieve this (it’s your choice).
 	#URL http://localhost:9000/scratchCards == METHOD POST
+	
+	JSON:{
+
+                
+
+                "SerialNumber": "11",
+
+                "ExpiryDate": "2019-01-01T00:00:00.000Z",
+
+                "VoucherAmount": 100000               
+
+                
+           }
 
 2. Fetch all records inserted in the last 3 minutes regardless of whether they are expired or not.
 	#URL http://localhost:9000/newScratchCards == METHOD GET
