@@ -1,0 +1,3 @@
+C:\Users\Omen\Desktop\nodeJS101\NodejsAPI\NodejsAPI\obj\Debug\NodejsAPI.njsprojAssemblyReference.cache
+C:\Users\Omen\Desktop\nodeJS101\NodejsAPI\NodejsAPI\obj\Debug\NodejsAPI.njsproj.CoreCompileInputs.cache
+C:\Users\Omen\Desktop\nodeJS101\NodejsAPI\NodejsAPI\bin\Microsoft.NodejsTools.WebRole.dll

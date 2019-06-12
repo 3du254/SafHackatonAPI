@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-api",
+  "version": "0.0.0",
+  "description": "NodejsAPI",
+  "main": "app.js",
+  "author": {
+    "name": ""    
+  },
+  "scripts": {   
+    "test":"mocha --recursive --exit"
+  },
+  "dependencies": {
+    "mssql": "^5.1.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "request": "^2.88.0",
+    "should": "^13.2.3"
+  }
+}
