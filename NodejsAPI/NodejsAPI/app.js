@@ -33,17 +33,24 @@ app.get('/scratchCards/:id',(req,resp)=>{
 /*POST requests*/
 app.post('/scratchCards',(req,resp)=>{
     /*add records in table scratch card*/
-    var reqBody='';
-    req.on("data",function(data){
-        reqBody+=data;
-        if(reqBody.length>1e7){//check not to exceed 10mb
-            httpMsg.show413(req,resp);
-        }
-    })
-    req.on("end",function (){
-        
-        cont.add(req,resp,reqBody);
-    }); 
+    
+    const schema ={
+        /*"ID": "", auto increment*/
+        /*"VoucherNumber": "", auto generated*/
+        SerialNumber: Joi.string().required(),
+        ExpiryDate: Joi.string().required(),
+        VoucherAmount: Joi.number().required(),
+        /*"Status": "", set to active*/
+        /*"DateCreated": "", date.now*/
+        /*"DateUpdated": "" date.now*/
+    }
+    const result=Joi.validate(req.body,schema);
+    if(result.error){
+        resp.status(400).send(result.error.details[0].message);
+        return;
+    }   
+    cont.add(req,resp,req.body);
+   
 });
 
 /*PUT requests*/

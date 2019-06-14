@@ -1,4 +1,5 @@
 ﻿var db = require("../core/db");
+const Joi =require('joi');
 var settings = require("../settings");
 var httpMsg = require("../core/httpMessage");
 var util=require("util");
@@ -44,8 +45,9 @@ exports.get = function (req, resp, id) {
 // function to add ScratchCard via POST
 exports.add = function (req, resp, reqBody) {
     try{
-        if(!reqBody)throw new Error("Input not valid");
-        var data=JSON.parse(reqBody);
+        if(!reqBody)throw new Error("Input not validddd");
+        
+        var data=reqBody;
         if(data){
             var d = new Date();
             var VoucherNumber = Math.floor(100000000 + Math.random() * 900000000); //generate random numbers            
