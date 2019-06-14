@@ -82,6 +82,8 @@ exports.update = function (req, resp, reqBody) {
         var data=JSON.parse(reqBody);
         if(data){
             if(!data.SerialNumber)throw new Error("serial number not provided");
+            if(!data.Status)throw new Error("Status not provided");
+            if(data.Status!='taken')throw new Error("can only take status taken");
 
             var sql=" UPDATE [dbo].[ScratchCard] SET  ";
             var isDataProvided=false;

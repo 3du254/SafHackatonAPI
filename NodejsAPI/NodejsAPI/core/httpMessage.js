@@ -50,12 +50,13 @@ exports.show413=function (req,resp){
     }
     else{
         resp.writeHead(413, "Request Entity too large", { "Content-Type": "application/json" });
-        resp.write(JSON.stringify({data:"Request Entity too large"}))
+        resp.write(JSON.stringify({data:"Request Entity too large"}));
     }
     resp.end();
 };
 exports.sent200=function (req,resp){
     resp.writeHead(200, { "Content-Type": "application/json" });
+    resp.write(JSON.stringify({status:"success"}))
     resp.end();    
 };
 exports.showHome=function (req,resp){
