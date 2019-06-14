@@ -15,6 +15,8 @@ exports.sendJSON=function (req,resp,data){
     resp.writeHead(200,{"Content-Type":"application/json"});
     if(data){
         resp.write(JSON.stringify(data));
+    }else{
+        resp.write("record not found");
     }    
     resp.end();
 };
