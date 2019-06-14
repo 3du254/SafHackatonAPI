@@ -4,12 +4,14 @@
   "description": "NodejsAPI",
   "main": "app.js",
   "author": {
-    "name": ""    
+    "name": ""
   },
-  "scripts": {   
-    "test":"mocha --recursive --exit"
+  "scripts": {
+    "test": "mocha --recursive --exit"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
     "mssql": "^5.1.0",
     "supertest": "^4.0.2"
   },

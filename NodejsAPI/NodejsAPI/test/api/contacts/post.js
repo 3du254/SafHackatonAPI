@@ -20,7 +20,7 @@ var settings = require("../../../settings");
          .send({             
                 SerialNumber: "1234567890",
                 ExpiryDate: "2019-06-12T00:00:00.000Z",
-                VoucherAmount: 100000,
+                VoucherAmount: 250,
                 Status: "active",
                 DateCreated: "2019-06-12T00:00:00.000Z",
                 DateUpdated: "2019-06-12T00:00:00.000Z"               
